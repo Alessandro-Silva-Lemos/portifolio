@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      position: relative;
+      overflow: hidden;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center transition-all duration-300" id="body">
+  <canvas id="particleCanvas"></canvas>
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full dark:bg-gray-800 dark:text-white relative z-10">
+    <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+    <form id="loginForm">
+      <div class="mb-4">
+        <label for="username" class="block text-sm font-medium">Usuário</label>
+        <input type="text" id="username" name="username" class="mt-1 p-2 w-full border rounded-lg dark:bg-gray-700 dark:border-gray-600" required>
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium">Senha</label>
+        <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-lg dark:bg-gray-700 dark:border-gray-600" required>
+      </div>
+      <div class="mb-4 flex items-center">
+        <input type="checkbox" id="rememberMe" class="mr-2">
+        <label for="rememberMe" class="text-sm">Lembrar-me</label>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Entrar</button>
+    </form>
+    <button id="toggleTheme" class="mt-4 w-full bg-gray-300 p-2 rounded-lg hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">Alternar Tema</button>
+  </div>
+</body>
+</html>
